@@ -19,17 +19,17 @@
 ##############################################################################
 
 {
-    'name': 'Project ETA',
-    'version': '1.0',
-    'author': 'Humanytek',
-    'website': 'http://humanytek.com',
-    'depends': [
-        'hr_timesheet',
-        'project',
-        'sale',
-        'account',
+    "name": "Project ETA",
+    "version": "1.0",
+    "author": "Humanytek",
+    "website": "http://humanytek.com",
+    "depends": [
+        "hr_timesheet",
+        "project",
+        "sale",
+        "account",
     ],
-    'data': [
-        'views/project_task.xml',
-    ]
+    "data": [
+        "views/project_task.xml",
+    ],
 }
