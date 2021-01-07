@@ -4,7 +4,7 @@ from odoo import api, fields, models, _
 class ProjectTask(models.Model):
     _inherit = "project.task"
 
-    date_deadline = fields.Datetime()
+    date_deadline = fields.Date()
     remaining_hours_to_deadline = fields.Float(
         compute="_compute_remaining_hours_to_deadline",
     )
@@ -14,5 +14,7 @@ class ProjectTask(models.Model):
             task.remaining_hours_to_deadline = 0
             if task.date_deadline:
                 task.remaining_hours_to_deadline = (
-                    (task.date_deadline - fields.Datetime.now()).total_seconds() / 60 / 60
+                    (task.date_deadline - fields.Datetime.now()).total_seconds()
+                    / 60
+                    / 60
                 )  # secods / minutes / hours
